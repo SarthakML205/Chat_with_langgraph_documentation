@@ -65,4 +65,4 @@ if question:
 
 # Footer
 st.markdown("---")
-st.markdown("**Created with LangChain and Groq API** :robot:")
+st.markdown("**Created with LangChain and Groq API**")
