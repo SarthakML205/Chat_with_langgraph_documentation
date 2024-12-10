@@ -1,0 +1,10 @@
+langchain
+langchain_community
+langchain-groq
+langchainhub
+langchain-chroma
+langchain_huggingface
+streamlit
+faiss-cpu
+beautifulsoup4
+python-dotenv
