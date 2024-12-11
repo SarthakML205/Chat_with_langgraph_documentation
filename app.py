@@ -35,7 +35,7 @@ def load_data():
 vectorstore = load_data()
 
 # Set up retriever
-retriever = vectorstore.as_retriever(search_type="similarity_score_threshold", search_kwargs={"k": 5, "score_threshold": 0.45})
+retriever = vectorstore.as_retriever(search_type="similarity_score_threshold", search_kwargs={"score_threshold": 0.45})
 
 groq_api_key = os.getenv("groq_api_key")
 llm = ChatGroq(groq_api_key=groq_api_key, model_name="Gemma2-9b-It")
@@ -49,7 +49,7 @@ if question:
         context = ' '.join([doc.page_content for doc in retrieved_docs])
         
         if context:
-            response = llm.invoke(f"""Answer the question according to the context given very briefly:
+            response = llm.invoke(f"""Answer the question according to the context given explain it well:
                Question: {question}.
                Context: {context}
             """)
